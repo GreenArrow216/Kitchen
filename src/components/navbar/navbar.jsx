@@ -9,7 +9,6 @@ export default function NavBar() {
     const [offset, setOffset] = useState(0);
     const [showMenu, setMenuVisibility] = useState(false);
     const windowSize = useWindowSize();
-    console.log(windowSize);
     useEffect(() => {
         const onScroll = () => setOffset(window.pageYOffset);
         window.removeEventListener('scroll', onScroll);

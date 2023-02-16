@@ -4,8 +4,6 @@ import BannerImage from "../../images/banner-image.png";
 import { useWindowSize } from "../customHook";
 
 export default function Section1() {
-    const windowSize = useWindowSize();
-    console.log('windowSzi', windowSize < 600, windowSize )
     return (
     <div className="section-1">
       <Carousel pageIndicator={true}>
