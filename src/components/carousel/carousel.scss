@@ -1,0 +1,79 @@
+@import '../../global.scss';
+
+.carousel-wrap {
+    position: relative;
+}
+.carousel {
+    overflow: hidden;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 900px;
+    overflow: hidden;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+    div,p {
+        white-space: normal;
+    }
+    -webkit-overflow-scrolling: touch;
+}
+
+.page-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -35px;
+    @media screen and (max-width: 992px) {
+        top: -15px
+    }
+    div {
+        height: 5px;
+        width: 50px;
+        border-radius: 3px;
+        margin-right: 10px;
+        background-color: $white;
+        &.active {
+            background-color: $primary-color;
+            color: $white;
+        }
+        @media screen and (max-width: 992px) {
+            height: 3px;
+            width: 30px;
+        }
+    }
+}
+
+.arrow-indicators {
+    div {
+        position: absolute;
+        top: calc(50% - 35.35px);
+        &:first-child{
+            left: -100px;   
+            @media screen and (max-width: 768px) {
+                left: -50px;
+            }
+        }
+        &:last-child {
+            right: -100px;
+            @media screen and (max-width: 768px) {
+                right: -50px;
+            }
+        }
+    }
+}
+
+.page-indicators, .arrow-indicators {
+    cursor: pointer;
+}
+
